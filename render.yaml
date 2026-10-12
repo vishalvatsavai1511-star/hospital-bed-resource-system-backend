@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hospital-bed-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: h2
+      - key: CORS_ORIGIN
+        value: "*"
